@@ -3,18 +3,23 @@
     padding: 0;
 }
 
+body {
+    width: 1020px;
+    margin: 0 auto;
+}
+
 .wrapper {
     display:block;
     width: 1020px;
 }
 
 .header {
-    margin: 0 auto;
     height: 95px;
-    width: 1020px;
     background-color: #2d303a;
     border-bottom: 6px solid #323746;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 .header h1 {
@@ -58,4 +63,10 @@
 
 .header__navigation a:hover {
     color: #f06c64;
+}
+
+.slider {
+    height: 600px;
+    background-color: #f06c64;
+    border-bottom: 6px solid #ea676b;
 }
