@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    width: 1020px;
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+}
+
+.portfolio {
+    height: 870px;
+    background-color: #2d303a;
+    border-bottom: 6px solid #323746;
+}
+
+.portfolio__wrapper {
+    padding: 73px 40px;
+}
+
+.portfolio h2, .about-us h2 {
+    font-size: 30px;
+    line-height: 17.86px;
+    font-weight: 900;
+    color: #666D89;
+    letter-spacing: 0.35px;
+}
+
+.portfolio p, .about-us p {
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-weight: 300;
+    margin-top: 26px;
+    letter-spacing: -0.2px;
+}
+
+.tags {
+    font-size: 12px;
+    line-height: 21.56px;
+    color: #767e9e;
+    margin: 9px 0 0 1px;
+}
+
+.tags li {
+    border: 1px solid #666d89;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 0 7px;
+    margin-right: 6px;
+}
+
+.tags li:hover {
+    color: #dedede;
+    border: 1px solid #dedede;
+    cursor: pointer;
+}
+
+.portfolio__projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 601px;
+    margin-top: 18px;
+    overflow: hidden;
+}
+
+.portfolio__projects div {
+    display: inline-block;
+}
+
+.portfolio__projects-image {
+    margin: 0 0 15px 0;
+}
+
+.portfolio-image:nth-child(n+13) {
+    display: none;
+}
+
+.about-us {
+    height: 734px;
+    background-color: #f2f2f2;
+    border-bottom: 6px solid #fff;
+}
+
+.about-us__wrapper {
+    padding: 72px 40px 0 40px;
+}
+
+.about-us__employees {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 43px;
+}
+
+.about-us__employees h3 {
+    font-weight: 900;
+    font-size: 18px;
+    color: #666d89;
+    line-height: 17.86px;
+    margin-top: 15px;
+}
+
+.about-us__employees p {
+    font-weight: 400;
+    font-size: 12px;
+    color: #767e9e;
+    line-height: 21.56px;
+    margin-top: 9px;
+}
+
+.about-us__employees div {
+    display: inline-block;
+    width: 300px;
+}
+
+.about-us__employees div:nth-child(2) img{
+    margin-left:-1px;
+}
+.social-links {
+    margin: 23px 0 0 1px;
+}
+
+.social-links li{
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.social-links li a img{
+   transition: transform .2s;
+}
+
+.social-links li a img:hover {
+    transform: scale(.9);
+}
