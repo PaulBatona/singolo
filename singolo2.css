@@ -106,6 +106,7 @@ body {
     color: #666d89;
     line-height: 17.86px;
     margin-top: 15px;
+    overflow: hidden;
 }
 
 .about-us__employees p {
