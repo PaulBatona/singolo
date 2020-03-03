@@ -215,6 +215,7 @@ body {
     line-height: 21.56px;
     overflow: hidden;
     height: 63px;
+    text-align: justify;
 }
 
 .layout-3-column div {
