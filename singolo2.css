@@ -37,6 +37,7 @@ body {
     font-weight: 300;
     margin-top: 26px;
     letter-spacing: -0.2px;
+    text-align: justify;
 }
 
 .tags {
@@ -115,6 +116,7 @@ body {
     color: #767e9e;
     line-height: 21.56px;
     margin-top: 9px;
+    text-align: justify;
 }
 
 .about-us__employees div {
