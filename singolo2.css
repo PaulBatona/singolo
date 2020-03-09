@@ -42,7 +42,7 @@ body {
 
 .tags {
     font-size: 12px;
-    line-height: 21.56px;
+    line-height: 20.56px;
     color: #767e9e;
     margin: 9px 0 0 1px;
 }
@@ -52,7 +52,20 @@ body {
     border-radius: 5px;
     display: inline-block;
     padding: 0 7px;
-    margin-right: 6px;
+    margin-right: 6.5px;
+}
+
+.tags li:first-child{
+    color: #dedede;
+    border: 1px solid #dedede;
+}
+
+.tags li:nth-child(2n){
+    padding: 0 6px;
+}
+
+.tags li:nth-child(3){
+    padding: 0 5.5px;
 }
 
 .tags li:hover {
@@ -67,7 +80,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     height: 601px;
-    margin-top: 18px;
+    margin-top: 19px;
     overflow: hidden;
 }
 
@@ -127,6 +140,15 @@ body {
 .about-us__employees div:nth-child(2) img{
     margin-left:-1px;
 }
+
+.about-us__employees div:nth-child(2) .social-links li {
+    margin-right: 5px;;
+}
+
+.about-us__employees div:last-child .social-links {
+    margin:23px 0 0 0;
+}
+
 .social-links {
     margin: 23px 0 0 1px;
 }
