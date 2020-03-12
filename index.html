@@ -8,29 +8,36 @@
     <title>Singolo full task</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="top">
         <div class="wrapper">
             <a href="#" class="logo"><h1>Singolo</h1><span>*</span></a>
             <nav>
-                <ul class="header__navigation">
-                    <li><a href="#" id="active">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul class="header__navigation" id="menu">
+                    <li><a href="#top" class="active">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="slider">
+    <section class="slider" id="slider">
         <div class="wrapper">
-            <img src="assets/img/left.png" alt="" class="slider__left-button">
-            <img src="assets/img/slider-phone.png" alt="Вертикальный iPhone" class="vertical-phone">
-            <img src="assets/img/slider-phone.png" alt="Горизонтальный iPhone" class="horizontal-phone">
-            <img src="assets/img/right.png" alt="" class="slider__right-button">
+            <img src="assets/img/left.png" alt="" class="slider__left-button" id="slider__left-button">
+            <img src="assets/img/right.png" alt="" class="slider__right-button" id="slider__right-button">
+            <div class="slider_item" id="slider_item">
+                <img src="assets/img/slider-phone.png" alt="Вертикальный iPhone" class="vertical-phone" id="vertical-phone">
+                <img src="assets/img/display-off.png" alt="" class="display-off">
+                <img src="assets/img/slider-phone.png" alt="Горизонтальный iPhone" class="horizontal-phone" id="horizontal-phone">
+                <img src="assets/img/display-off.png" alt="" class="display-off-rotate">
+            </div>
+            <div class="slider-item" id="slider_item" style="display: none;">
+                <img src="assets/img/Slide-2.jpg" alt="">
+            </div>
         </div>
     </section>
-    <section class="our-services">
+    <section class="our-services" id="services">
         <div class="wrapper">
             <div class="our-services__content">
                 <h2>Our Services</h2>
@@ -85,7 +92,7 @@
         </div>
     </section>
     <!-- ВТОРАЯ ЧАСТЬ -->
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="portfolio__wrapper">
             <h2>Portfolio</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -111,7 +118,7 @@
             </div>
         </div>
     </section>
-    <section class="about-us">
+    <section class="about-us" id="about">
         <div class="about-us__wrapper">
             <h2>About Us</h2>
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -153,7 +160,7 @@
         </div>
     </section>
     <!-- ТРЕТЬЯ ЧАСТЬ -->
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="contact__wrapper">
             <h2>Get a Quote</h2>
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -163,7 +170,7 @@
                     <input class="contact-field contact-email" type="email" name="email" placeholder="Email (Required)" required>
                     <input class="contact-field contact-subject" type="text" name="subject" placeholder="Subject">
                     <textarea class="contact-field contact-describe" name="describe" placeholder="Describe your project in detail..."></textarea>
-                    <input class="contact-button" type="submit" value="Submit">
+                    <input class="contact-button" type="submit" value="Submit" id="submit">
                 </form>
                 <div class="contact__info">
                     <h3>Contact Information</h3>
@@ -187,5 +194,6 @@
             </ul>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
