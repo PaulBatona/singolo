@@ -113,10 +113,6 @@ a.active{
     cursor: pointer;
 }
 
-.slider__left-button:hover, .slider__right-button:hover {
-    color: rgba(0, 0, 0, 0.8);
-}
-
 .hidden {
     display: none;
 }
