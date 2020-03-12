@@ -39,8 +39,8 @@ function showSlide(n) {
     if (n<1) {
         slideIndex = slides.length;
     }
-    for (let i=0; i< slides.length; i++){
-        slides[i].style.display="none";
+    for (let i=0; i<slides.length; i++){
+        slides[i].classList.add('hidden');
     }
-    slides[slideIndex-1].style.display="block";
+    slides[slideIndex-1].classList.remove('hidden');
 }
