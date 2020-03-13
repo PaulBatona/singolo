@@ -297,11 +297,6 @@ a.active{
     margin-right: 6.5px;
 }
 
-.tags li:first-child{
-    color: #dedede;
-    border: 1px solid #dedede;
-}
-
 .tags li:nth-child(2n){
     padding: 0 6px;
 }
@@ -314,6 +309,11 @@ a.active{
     color: #dedede;
     border: 1px solid #dedede;
     cursor: pointer;
+}
+
+.portfolio__tags li.active {
+    color: #dedede;
+    border: 1px solid #dedede;
 }
 
 .portfolio__projects {
@@ -336,6 +336,11 @@ a.active{
 
 .portfolio-image:nth-child(n+13) {
     display: none;
+}
+
+.portfolio-border{
+    border:5px solid #F06C64;
+    box-sizing: border-box;
 }
 
 .about-us {
