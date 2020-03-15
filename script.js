@@ -7,7 +7,6 @@ const SLIDER_RIGHT = document.getElementById('slider__right');
 const SLIDER = document.getElementById('slider');
 
 const PORTFOLIO_TAG = document.getElementById('portfolio__tags');
-const PORTFOLIO_PROJECT = document.getElementById('portfolio__projects');
 
 const BUTTON = document.getElementById('submit');
 const CLOSE_BUTTON = document.getElementById('close-button');
@@ -38,7 +37,9 @@ function slider(){
     }
     slides[current].classList.add('hidden');
 }
+
 slider();
+
 document.getElementById('slider__left-button').onclick = function(){
     if(current-1 == -1){
         current = slides.length-1;
@@ -62,17 +63,27 @@ document.getElementById('slider__right-button').onclick = function(){
 // ------------------------------------------PORTFOLIO
 
 PORTFOLIO_TAG.addEventListener('click', (event) => {
-    PORTFOLIO_TAG.querySelectorAll('li').forEach(elem => elem.classList.remove('active'));
-    event.target.classList.add('active');
+    if(!(event.target.classList.contains('active'))){
+        PORTFOLIO_TAG.querySelectorAll('li').forEach(elem => elem.classList.remove('active'));
+        event.target.classList.add('active');
+        shuffle();
+    }
 })
 
-PORTFOLIO_PROJECT.addEventListener('click', (event) => {
-    PORTFOLIO_PROJECT.querySelectorAll('img.portfolio__projects-image').forEach(elem => elem.classList.remove('porfolio-border'));
-    event.target.classList.add('portfolio-border');
-})
+function shuffle(){
+    var parent = document.getElementById("portfolio__projects");
+    var fragment = document.createDocumentFragment();
+    while (parent.children.length) {
+        fragment.appendChild(parent.children[Math.floor(Math.random() * parent.children.length)]);
+    }
+    parent.appendChild(fragment);
+}
+
+
 
 // ------------------------------------------CONTACT
 
+document.getElementById('form').addEventListener('submit', event => {event.preventDefault()});
 BUTTON.addEventListener('click', (event) => {
     const contact_name = document.getElementById('contact-name').value.toString();
     const contact_email = document.getElementById('contact-email').value.toString();

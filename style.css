@@ -121,10 +121,6 @@ a.active{
     display: none;
 }
 
-.opacity{
-    opacity: 0;
-}
-
 .vertical-phone {
     position: absolute;
     top: 53px;
@@ -319,7 +315,7 @@ a.active{
     cursor: pointer;
 }
 
-.portfolio__tags li.active {
+.tags li.active {
     color: #dedede;
     border: 1px solid #dedede;
 }
@@ -340,15 +336,19 @@ a.active{
 
 .portfolio__projects-image {
     margin: 0 0 15px 0;
+    position: relative;
 }
 
 .portfolio-image:nth-child(n+13) {
     display: none;
 }
 
-.portfolio-border{
-    border:5px solid #F06C64;
-    box-sizing: border-box;
+.rectangle-border{
+    background-image: url(assets/img/rectangle.png);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    z-index: 1;
 }
 
 .about-us {
