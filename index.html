@@ -166,7 +166,7 @@
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="contact__form">
                 <form class="form" action="" id="form">
-                    <input class="contact-field contact-name" type="text" name="name" id="contact-name" placeholder="Name (Required)" required>
+                    <input class="contact-field contact-name" type="text" name="name" id="contact-name" pattern="^[A-Za-zА-Яа-я ]+" placeholder="Name (Required)" required>
                     <input class="contact-field contact-email" type="email" name="email" id="contact-email" placeholder="Email (Required)" required>
                     <input class="contact-field contact-subject" type="text" name="subject" id="subject" placeholder="Subject">
                     <textarea class="contact-field contact-describe" name="describe" id="description" placeholder="Describe your project in detail..."></textarea>
@@ -175,11 +175,9 @@
                 
                 <div id="message-block" class="hidden">
                     <div id="message">
-                        <p>Письмо отправлено</p>
-                        <p>Имя: <span id="contact-name-output"></span></p>
-                        <p>E-mail: <span id="contact-email-output"></span></p>
-                        <p id="contact-subject-display" class="hidden"><span id="contact-subject-output"></span></p>
-                        <p id="contact-description-display" class="hidden"><span id="contact-description-output"></span></p>
+                        <p>The letter was sent</p>
+                        <p>Subject: <span id="contact-subject-output"></span></p>
+                        <p>Description: <span id="contact-description-output"></span></p>
                         <br>
                         <button id="close-button" class="contact-button">Close</button>
                     </div>
@@ -187,7 +185,7 @@
                 <div class="contact__info">
                     <h3>Contact Information</h3>
                     <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. </p>
-                    <a class="contact__links info-address" href="#"><img src="assets/img/location.png" alt="">Elm St. 14/05 Lost City</a>
+                    <a class="contact__links info-address" href="#contact"><img src="assets/img/location.png" alt="">Elm St. 14/05 Lost City</a>
                     <a class="contact__links info-phone" href="tel:035283318635"><img src="assets/img/call.png" alt="">03528 331 86 35</a>
                     <a class="contact__links info-email" href="mailto:info@singolo.com"><img src="assets/img/mail.png" alt="">info@singolo.com</a>
                 </div>

@@ -7,9 +7,11 @@ const SLIDER_RIGHT = document.getElementById('slider__right');
 const SLIDER = document.getElementById('slider');
 
 const PORTFOLIO_TAG = document.getElementById('portfolio__tags');
+const PORTFOLIO_PROJECT = document.getElementById("portfolio__projects");
 
 const BUTTON = document.getElementById('submit');
 const CLOSE_BUTTON = document.getElementById('close-button');
+const FORM = document.getElementById('form');
 
 // ------------------------------------------NAV
 
@@ -63,15 +65,17 @@ document.getElementById('slider__right-button').onclick = function(){
 // ------------------------------------------PORTFOLIO
 
 PORTFOLIO_TAG.addEventListener('click', (event) => {
-    if(!(event.target.classList.contains('active'))){
-        PORTFOLIO_TAG.querySelectorAll('li').forEach(elem => elem.classList.remove('active'));
-        event.target.classList.add('active');
-        shuffle();
+    if(event.target.tagName == 'LI'){
+        if(!(event.target.classList.contains('active'))){
+            PORTFOLIO_TAG.querySelectorAll('li').forEach(elem => elem.classList.remove('active'));
+            event.target.classList.add('active');
+            shuffle();
+        }
     }
 })
 
 function shuffle(){
-    var parent = document.getElementById("portfolio__projects");
+    var parent = PORTFOLIO_PROJECT;
     var fragment = document.createDocumentFragment();
     while (parent.children.length) {
         fragment.appendChild(parent.children[Math.floor(Math.random() * parent.children.length)]);
@@ -79,30 +83,38 @@ function shuffle(){
     parent.appendChild(fragment);
 }
 
-
+PORTFOLIO_PROJECT.addEventListener('click', (event) => {
+    if(event.target.tagName == 'IMG'){
+        if(event.target.classList.contains('selected')){
+            event.target.classList.remove('selected');
+        }
+        else{
+            PORTFOLIO_PROJECT.querySelectorAll('img').forEach(elem => elem.classList.remove('selected'));
+            event.target.classList.add('selected');
+        }
+    }
+})
 
 // ------------------------------------------CONTACT
 
-document.getElementById('form').addEventListener('submit', event => {event.preventDefault()});
+FORM.addEventListener('submit', event => {
+    // event.preventDefault()
+});
+
 BUTTON.addEventListener('click', (event) => {
-    const contact_name = document.getElementById('contact-name').value.toString();
-    const contact_email = document.getElementById('contact-email').value.toString();
     // const contact_subject = document.getElementById('contact-subject').value.toString();
     // const contact_description = document.getElementById('contact-description').value.toString();
 
-    document.getElementById('contact-name-output').innerText = contact_name;
-    document.getElementById('contact-email-output').innerText = contact_email;
-    
     // if(contact_subject==""){document.getElementById('contact-email-output').innerText = "Без темы"}
     // else{
     //     document.getElementById('contact-subject-display').classList.remove('hidden');
     //     document.getElementById('contact-subject-output').innerText = contact_subject;
     // };
 
-    document.getElementById('message-block').classList.remove('hidden');
-    event.preventDefault();
+    // document.getElementById('message-block').classList.remove('hidden');
+    // event.preventDefault();
 })
 
 CLOSE_BUTTON.addEventListener('click', () => {
-    document.getElementById('message-block').classList.add('hidden');
+    // document.getElementById('message-block').classList.add('hidden');
 })
