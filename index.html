@@ -168,18 +168,17 @@
                 <form class="form" action="" id="form">
                     <input class="contact-field contact-name" type="text" name="name" id="contact-name" pattern="^[A-Za-zА-Яа-я ]+" placeholder="Name (Required)" required>
                     <input class="contact-field contact-email" type="email" name="email" id="contact-email" placeholder="Email (Required)" required>
-                    <input class="contact-field contact-subject" type="text" name="subject" id="subject" placeholder="Subject">
-                    <textarea class="contact-field contact-describe" name="describe" id="description" placeholder="Describe your project in detail..."></textarea>
+                    <input class="contact-field contact-subject" type="text" name="subject" id="contact-subject" placeholder="Subject">
+                    <textarea class="contact-field contact-describe" name="describe" id="contact-description" maxlength="100" placeholder="Describe your project in detail..."></textarea>
                     <input class="contact-button" type="submit" value="Submit" id="submit">
                 </form>
-                
                 <div id="message-block" class="hidden">
                     <div id="message">
                         <p>The letter was sent</p>
-                        <p>Subject: <span id="contact-subject-output"></span></p>
-                        <p>Description: <span id="contact-description-output"></span></p>
+                        <p><span id="contact-subject-output">Without subject</span></p>
+                        <p><span id="contact-description-output">Without description</span></p>
                         <br>
-                        <button id="close-button" class="contact-button">Close</button>
+                        <button id="close-button" class="contact-button">Ok</button>
                     </div>
                 </div>
                 <div class="contact__info">

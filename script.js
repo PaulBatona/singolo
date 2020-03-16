@@ -98,23 +98,32 @@ PORTFOLIO_PROJECT.addEventListener('click', (event) => {
 // ------------------------------------------CONTACT
 
 FORM.addEventListener('submit', event => {
-    // event.preventDefault()
+    event.preventDefault();
+    formCheck();
+    FORM.reset();
+    return false;
 });
 
-BUTTON.addEventListener('click', (event) => {
-    // const contact_subject = document.getElementById('contact-subject').value.toString();
-    // const contact_description = document.getElementById('contact-description').value.toString();
+const formCheck = function(){
+    const contact_subject = document.getElementById('contact-subject').value.toString();
+    const contact_description = document.getElementById('contact-description').value.toString();
 
-    // if(contact_subject==""){document.getElementById('contact-email-output').innerText = "Без темы"}
-    // else{
-    //     document.getElementById('contact-subject-display').classList.remove('hidden');
-    //     document.getElementById('contact-subject-output').innerText = contact_subject;
-    // };
+    const validName = document.getElementById('contact-name').checkValidity();
+    const validEmail = document.getElementById('contact-name').checkValidity();
 
-    // document.getElementById('message-block').classList.remove('hidden');
-    // event.preventDefault();
-})
+    if(validName && validEmail){
+        if(contact_subject){
+            document.getElementById('contact-subject-output').innerText = 'Subject: ' + contact_subject;
+        }
+        if(contact_description){
+            document.getElementById('contact-description-output').innerText = 'Description: ' + contact_description;
+        }
+        document.getElementById('message-block').classList.remove('hidden');
+    }
+}
 
 CLOSE_BUTTON.addEventListener('click', () => {
-    // document.getElementById('message-block').classList.add('hidden');
+    document.getElementById('contact-subject-output').innerText = 'Without subject';
+    document.getElementById('contact-description-output').innerText = 'Without description'
+    document.getElementById('message-block').classList.add('hidden');
 })

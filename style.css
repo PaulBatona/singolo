@@ -527,16 +527,20 @@ a.active{
     position: absolute;
     top: 40%;
     left: 40%;
-    text-align: center;
     background-color: #2d303a;
     padding: 0 40px;
     border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    align-items: center;    
 }
 
 #message p {
     margin-top: 15px;
     font-weight: 700;
     color: #f2f2f2;
+    text-align: center;
 }
 
 #close-button{
