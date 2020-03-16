@@ -131,6 +131,7 @@ a.active{
     background-position: 0px -70px;
     background-repeat: no-repeat;
     z-index: 1;
+    cursor: pointer;
 }
 
 .horizontal-phone {
@@ -144,6 +145,7 @@ a.active{
     background-position: -105.2px -57px;
     background-repeat: no-repeat;
     z-index: 1;
+    cursor: pointer;
 }
 
 .display-off{
@@ -325,7 +327,7 @@ a.active{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 601px;
+    height: 607px;
     margin-top: 19px;
     overflow: hidden;
 }
@@ -335,20 +337,20 @@ a.active{
 }
 
 .portfolio__projects-image {
-    margin: 0 0 15px 0;
-    position: relative;
+    margin: 0 0 8px 0;
+    border: 5px solid transparent;
+}
+
+.selected {
+    border: 5px solid #F06C64;
 }
 
 .portfolio-image:nth-child(n+13) {
     display: none;
 }
 
-.rectangle-border{
-    background-image: url(assets/img/rectangle.png);
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    z-index: 1;
+.portfolio-border{
+    outline: 5px solid #F06C64;
 }
 
 .about-us {
