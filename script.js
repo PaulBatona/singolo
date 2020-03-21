@@ -20,8 +20,9 @@ MENU.addEventListener('click', (event) => {
     event.target.classList.add('active');
 });
 
-// ------------------------------------------SLIDER
+// ------------------------------------------HOME
 
+// ----------------------PHONES
 VERT_PHONE.addEventListener('click', (event) => {
     event.target.classList.toggle('bg-off');
 });
@@ -29,6 +30,8 @@ VERT_PHONE.addEventListener('click', (event) => {
 HORIZ_PHONE.addEventListener('click', (event) => {
     event.target.classList.toggle('bg-off');
 });
+
+// ----------------------SLIDES
 
 let slides = document.querySelectorAll('#slider_item');
 let current = 1;

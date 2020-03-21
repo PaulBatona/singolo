@@ -339,6 +339,7 @@ a.active{
 .portfolio__projects-image {
     margin: 0 0 8px 0;
     border: 5px solid transparent;
+    cursor: pointer;
 }
 
 .selected {
