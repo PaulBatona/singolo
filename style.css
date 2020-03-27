@@ -156,15 +156,20 @@ a.active{
 }
 
 .display-off-rotate{
-    transform: rotate(90deg);
     position: absolute;
-    top: 113px;
-    right: 271px;
+    top: 185px;
+    right: 199px;
     z-index: 0;
 }
 
 .bg-off {
     background-image:none;
+}
+
+.slider-two{
+    background-color: #648bf0;
+    border-bottom: 6px solid #2f5ed3;
+    height: 600px;
 }
 
 .our-services {
@@ -186,7 +191,8 @@ a.active{
     font-size: 18px;
     line-height: 30px;
     color: #767e9e;
-    margin: 26px 0 0 41px;
+    margin: 26px 40px 0 40px;
+    text-align: justify;
 }
 
 .icon-round {
@@ -649,44 +655,86 @@ a.active{
 
     .vertical-phone {
         position: absolute;
-        width: 180.85px;
-        height: 363.74px;
-        left: 83.19px;
-        top: 40.59px;
-        border-radius: 28px;
+        width: 180px;
+        height: 363px;
+        left: 83px;
+        top: 117px;
         box-shadow: 19px 19px rgba(0,0,0, 0.15);
-        
     }
-    
     .horizontal-phone {
         position: absolute;
-        width: 180.93px;
-        height: 364.21px;
-        left: 453px;
-        top: 133.05px;
+        width: 180px;
+        height: 364px;
+        left: 398px;
+        top: 112px;
         transform: rotate(90deg);
-        border-radius: 28px;
         box-shadow: 19px -19px rgba(0,0,0, 0.15);
     }
+    .display-off{
+        top: 167px;
+        left: 91px;
+        height: 270px;
+        width: 165px;
+    }
+    .display-off-rotate{
+        height: 165px;
+        width: 270px;
+        top: 213px;
+        right: 147px;
+    }
 
+    .slider-two{
+        height: 600px;
+    }
 /*--------------------OUR SERVICES--------------------------*/
+.layout-3-column {
+    margin: 28px 74px 25px 41px;
+}
 
     .layout-3-column li{
-        width: 45%;
-        margin: 28px 15px 0 0;
+        width: 46%;
+        margin: 0px 48px 39px 0;
     }
 
     .layout-3-column li:nth-child(2n){
-        margin: 0px 0 0 1px;
+        margin: 0px;
     }
 
-/*--------------------ABOUT US--------------------------*/
+    .our-services__content h2 {
+        padding: 54px 0 0 40px;
+    }
 
+/*--------------------PORTFOLIO--------------------------*/
+    .portfolio{
+        height: 1069px;
+    }
+    .portfolio__projects{
+        height: 796px;
+    }
+    .portfolio__projects-image {
+        width: calc(33% - 4px);
+    }
+
+
+/*--------------------ABOUT US--------------------------*/
+    .about-us{
+        height: 700px;
+    }
+    .social-links-employees, .about-us__employees div:last-child .social-links-employees{
+        margin-top: 5px;
+    }
+    .about-us__employees{
+        margin: 43px 0 75px;
+    }
     .about-us__employees div{
         width: 32%;
     }
 
     .about-us__employees img {
         width: 100%;
+    }
+/*--------------------CONTACT--------------------------*/
+    .contact{
+        height: 631px;
     }
 }
