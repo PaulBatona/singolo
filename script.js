@@ -1,4 +1,7 @@
 const MENU = document.getElementById('menu');
+const BURGER = document.getElementById('burger-menu');
+const MOBILE_MENU = document.getElementById('mobile-menu');
+const LOGO = document.getElementById('logo');
 
 const VERT_PHONE = document.getElementById('vertical-phone');
 const HORIZ_PHONE = document.getElementById('horizontal-phone');
@@ -19,6 +22,35 @@ MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('a').forEach(elem => elem.classList.remove('active'));
     event.target.classList.add('active');
 });
+
+MOBILE_MENU.addEventListener('click', (event) => {
+    if(event.target.tagName == 'A'){
+        MOBILE_MENU.querySelectorAll('a').forEach(elem => elem.classList.remove('active'));
+        event.target.classList.add('active');
+        BURGER.classList.remove('open');
+        LOGO.classList.add('logo-margin');
+        MOBILE_MENU.style.display="none";
+        menuOpen = false;
+    }
+});
+
+
+// ------------------------------------------BURGER NAV
+let menuOpen = false;
+BURGER.addEventListener('click', () => {
+    if(!menuOpen){
+        BURGER.classList.add('open');
+        LOGO.classList.remove('logo-margin');
+        MOBILE_MENU.style.display = "block";
+        menuOpen = true;
+    }
+    else{
+        BURGER.classList.remove('open');
+        LOGO.classList.add('logo-margin');
+        MOBILE_MENU.style.display="none";
+        menuOpen = false;
+    }
+})
 
 // ------------------------------------------HOME
 
