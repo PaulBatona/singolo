@@ -15,9 +15,7 @@ body {
 html {
     scroll-behavior: smooth;
 }
-.flex{
-    display: flex;
-}
+
 .header {
     height: 95px;
     background-color: #2d303a;
@@ -852,6 +850,9 @@ a.active{
         padding: 200px 0 0 71px;
         border: 1px solid #2D303A;
         transition: all .3s ease-in-out;
+        box-shadow: 10px 0px 5px rgba(0, 0, 0, .3);
+        top: 0;
+        z-index: -1;
     }
 
     #burger-menu {

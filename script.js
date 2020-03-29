@@ -34,7 +34,6 @@ MOBILE_MENU.addEventListener('click', (event) => {
     }
 });
 
-
 // ------------------------------------------BURGER NAV
 let menuOpen = false;
 BURGER.addEventListener('click', () => {
@@ -49,6 +48,15 @@ BURGER.addEventListener('click', () => {
         LOGO.classList.add('logo-margin');
         MOBILE_MENU.style.display="none";
         menuOpen = false;
+    }
+})
+
+LOGO.addEventListener('click', () => {
+        if(menuOpen){
+            BURGER.classList.remove('open');
+            LOGO.classList.add('logo-margin');
+            MOBILE_MENU.style.display="none";
+            menuOpen = false;
     }
 })
 
