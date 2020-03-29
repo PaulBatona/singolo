@@ -2,6 +2,7 @@ const MENU = document.getElementById('menu');
 const BURGER = document.getElementById('burger-menu');
 const MOBILE_MENU = document.getElementById('mobile-menu');
 const LOGO = document.getElementById('logo');
+const DARKEN = document.getElementById('darken');
 
 const VERT_PHONE = document.getElementById('vertical-phone');
 const HORIZ_PHONE = document.getElementById('horizontal-phone');
@@ -30,6 +31,7 @@ MOBILE_MENU.addEventListener('click', (event) => {
         BURGER.classList.remove('open');
         LOGO.classList.add('logo-margin');
         MOBILE_MENU.style.display="none";
+        DARKEN.style.display = "none";
         menuOpen = false;
     }
 });
@@ -41,23 +43,34 @@ BURGER.addEventListener('click', () => {
         BURGER.classList.add('open');
         LOGO.classList.remove('logo-margin');
         MOBILE_MENU.style.display = "block";
+        DARKEN.style.display = "block";
         menuOpen = true;
     }
     else{
         BURGER.classList.remove('open');
         LOGO.classList.add('logo-margin');
         MOBILE_MENU.style.display="none";
+        DARKEN.style.display = "none";
         menuOpen = false;
     }
 })
 
 LOGO.addEventListener('click', () => {
-        if(menuOpen){
-            BURGER.classList.remove('open');
-            LOGO.classList.add('logo-margin');
-            MOBILE_MENU.style.display="none";
-            menuOpen = false;
+    if(menuOpen){
+        BURGER.classList.remove('open');
+        LOGO.classList.add('logo-margin');
+        MOBILE_MENU.style.display="none";
+        DARKEN.style.display = "none";
+        menuOpen = false;
     }
+})
+
+DARKEN.addEventListener('click', () => {
+    BURGER.classList.remove('open');
+    LOGO.classList.add('logo-margin');
+    MOBILE_MENU.style.display="none";
+    DARKEN.style.display = "none";
+    menuOpen = false;
 })
 
 // ------------------------------------------HOME
